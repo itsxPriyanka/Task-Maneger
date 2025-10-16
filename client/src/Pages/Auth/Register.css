@@ -1,0 +1,392 @@
+.register-body {
+  /* background: url('./background.jpg') no-repeat; */
+  background-image: radial-gradient(circle 1300px at 78% 108%, #243447, #0f0f14 70%);
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Register Title */
+.register-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 3px 10px rgba(73, 76, 212, 0.8);
+  animation: float 3s ease-in-out infinite;
+  font-size: 2.5rem;
+
+}
+
+/* Register Form */
+.register-form {
+  width: 470px;
+  background: transparent;
+  border: 2px solid white;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  height: fit-content;
+  gap: 1vh;
+}
+
+.register-form input {
+  display: flex;
+  width: 85%;
+  height: 7vh;
+  border-radius: 30px;
+  text-align: left;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  outline: none;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.register-form input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+
+/* Register Input */
+.register-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  /* Adjust left padding to make space for the icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.register-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  /* Add shadow on focus */
+  outline: none;
+}
+
+/* Register Button */
+.register-button {
+  width: 10rem;
+  height: 6vh;
+  border-radius: 23px;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  transform: scale(1.02);
+  color: #fff;
+  background: linear-gradient(270deg, #0f0f14, rgb(14, 66, 117));
+  border: none;
+}
+
+.login-text {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.submit-reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.icon {
+  position: absolute;
+  left: 33px;
+  top: 46%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+
+}
+
+
+
+.register-input::placeholder {
+  color: #aaa;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+
+
+.google-login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.google-login-container button {
+  background-color: #4285F4;
+  /* Google blue */
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.google-login-container button:hover {
+  background-color: #357AE8;
+  /* Darker blue on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+.google-login-container button:active {
+  transform: scale(0.98);
+  /* Small shrink effect when pressed */
+}
+
+.google-login-container .google-logo {
+  margin-right: 10px;
+}
+
+
+
+
+
+.verification-form {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.verification-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.verification-form p {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.verification-input {
+  width: 76%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.verification-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.verification-button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.verification-button:hover {
+  background-color: #0056b3;
+}
+
+.verification-form .verification-input {
+  margin-bottom: 20px;
+}
+
+.verification-form .verification-button {
+  /* width: 100%; */
+}
+
+
+
+
+
+@media only screen and (max-width: 780px) {
+  .register-body {
+    background-image: radial-gradient(circle 1300px at 78% 78%, #243447, #0f0f14 70%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Register Title */
+  .register-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 3px 10px rgba(73, 76, 212, 0.8);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Register Form */
+  .register-form {
+    width: 92%;
+    background: transparent;
+    border: 1px solid gray;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    height: fit-content;
+    gap: 1vh;
+  }
+
+  .register-form input {
+    display: flex;
+    width: 85%;
+    height: 6vh;
+    border-radius: 30px;
+    text-align: left;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    outline: none;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .register-form input::placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+
+
+  /* Register Input */
+  .register-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    /* Adjust left padding to make space for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .register-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add shadow on focus */
+    outline: none;
+  }
+
+  /* Register Button */
+  .register-button {
+    width: 10rem;
+    height: 5vh;
+    border-radius: 23px;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+
+  .register-button:hover {
+    transform: scale(1.02);
+    color: #fff;
+    background: linear-gradient(270deg, #0f0f14, rgb(14, 66, 117));
+    border: none;
+  }
+
+  .login-text {
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .submit-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  .icon {
+    position: absolute;
+    left: 33px;
+    top: 46%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+
+  }
+
+
+
+  .register-input::placeholder {
+    color: #aaa;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}

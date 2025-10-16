@@ -1,0 +1,277 @@
+/* Sidebar container */
+.sidebar {
+  width: 19%;
+  /* background-color: #1f1e1e; */
+  background-image: radial-gradient(
+    circle 1300px at 58% 90%,
+    #243447,
+    #0f0f14 70%
+  );
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 18px;
+  border: 2px solid gray;
+  height: 90vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.sidebar.dark {
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+
+  /* Dark background */
+  color: #fff;
+  /* Light text color */
+  border: 3px solid black;
+}
+
+/* Profile section */
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.nav li.active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #333;
+  position: relative;
+  border-radius: 3px;
+}
+
+.nav li.active::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background-color: #06f306;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #bbb;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(85, 88, 85, 0.3);
+  left: -100%;
+  top: 0;
+  transition: left 0.5s ease;
+  z-index: 0;
+  /* Behind the text */
+}
+
+.nav li i {
+  margin-right: 10px;
+}
+
+.nav li.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav li:hover {
+  color: #fff;
+}
+
+/* Move the pseudo-element to fill the background on hover */
+.nav li:hover::before {
+  left: 0;
+}
+
+.sign-out {
+  margin-top: auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-out:hover {
+  color: #f83d3d;
+}
+
+.sign-out-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-out-container:hover {
+  color: #f83d3d;
+}
+
+.sign-out-icon {
+  font-size: 1.5rem;
+}
+
+.dark-mode-icon {
+  color: black;
+}
+
+.dark-mode-icon:hover {
+  color: white;
+}
+
+/* Dark mode styles */
+.sidebar.dark .profile-name {
+  color: black;
+}
+
+.sidebar.dark {
+  border: 2px solid black;
+}
+
+.sidebar.dark .nav li {
+  color: black;
+}
+
+.sidebar.dark .nav li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.dark .nav li.active {
+  background-color: #666;
+}
+
+.sidebar.dark .nav li.active::before {
+  background-color: #06f306;
+}
+
+.sidebar.dark .dark-mode-icon:hover {
+  color: aquamarine;
+}
+
+.sidebar.dark .sign-out-container {
+  color: black;
+}
+
+.sidebar.dark .sign-out-container:hover {
+  color: #f83d3d;
+}
+
+.sidebar.dark .sign-out {
+  color: black;
+}
+
+.sidebar.dark .sign-out:hover {
+  color: #f83d3d;
+}
+
+.sidebar-toggle-icon {
+  display: none;
+}
+
+.back-btn {
+  display: none;
+}
+
+.projects-dropdown {
+  margin-top: -10%;
+  margin-left: -3%;
+}
+
+/* Modal Styling */
+.modal-container {
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 43%;
+    /* background-color: #1f1e1e; */
+    background-image: radial-gradient(
+      circle 1300px at 58% 90%,
+      #243447,
+      #0f0f14 70%
+    );
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 18px;
+    border: 2px solid gray;
+    height: 90vh;
+    position: absolute;
+    top: 8px;
+    left: -270px;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+    margin-left: 2%;
+    overflow-y: scroll;
+  }
+
+  .sidebar.open {
+    left: 0;
+    /* When open, slide into view */
+  }
+
+  /* Show sidebar toggle (hamburger) icon only in mobile view */
+  .sidebar-toggle-icon {
+    display: block;
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  /* Mobile view - Only show icons, hide text */
+  .sidebar .profile-name {
+    font-size: 16px;
+  }
+
+  .sidebar .nav li i {
+    font-size: 20px;
+    /* Show icons only */
+  }
+
+  .back-btn {
+    display: block;
+    font-size: 1.8rem;
+    position: absolute;
+  }
+
+  .profile {
+    text-align: center;
+  }
+}
